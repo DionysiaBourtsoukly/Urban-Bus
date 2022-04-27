@@ -1,0 +1,160 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  background-color:rgb(121, 121, 190);
+  margin: 0;
+  font: 1.8em / 1.8 Candara;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 64);
+  margin:0;
+  padding-left: 1.5em;
+}
+
+.logo {
+  align-content: center;
+  font-size: 2em;
+  justify-content: flex-start;
+  font-family: Broadway;
+  color: white;
+  line-height: 2.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li{
+  display: flex;
+  padding-top: 10em;
+  padding: 1em;
+}
+nav ul :last-child{
+  padding-top: 0.7em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none; 
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+nav li:hover{
+  background-color: rgba(0,0,47,1);
+}
+
+.sign-in{
+  padding: 1em;
+  width: 2em;
+  cursor: pointer;
+} 
+
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url("bus.jpg");
+  }
+
+
+.info-map{
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.info{
+  background-color: rgba(224, 228, 239, 0.8);
+  border-radius: 10px;
+  margin: 5%;
+  width: 25em;
+  height: 60%;
+}
+
+.map{
+  background-color: rgba(224, 228, 239, 0.8);
+  border-radius: 10px;
+  margin: 5%;
+  width: 25em;
+  height: 60%;
+}
+
+/*info*/
+.info table{
+  border-radius: 10px;
+  width:25em;
+  border-collapse: separate;
+  border-spacing: 0em 0em;
+}
+
+.info table tr:nth-child(1){
+  border-radius: 10px;
+  height: 2em;
+  background-color: rgba(176, 120, 216, 0.8);
+
+}
+
+.info table tr:nth-child(1) td{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 2px double rgba(0,0,0,0.4);
+  justify-content: center;
+}
+
+.info table tr:nth-child(1) td h2{
+  text-align: center;
+  font-weight: 500;
+}
+
+.info table td:nth-child(1){
+  text-align: end;
+  width: 42%;
+}
+.info table td:nth-child(2){
+  text-align: start;
+  padding-left: 5%;
+}
+
+/*map*/
+.map table{
+  border-radius: 10px;
+  width:25em;
+  border-collapse: separate;
+  border-spacing: 0em 0em;
+}
+
+.map table tr:nth-child(1){
+  border-radius: 10px;
+  height: 2em;
+  background-color: rgba(176, 120, 216, 0.8);
+  font-weight: 500;
+}
+
+.map table tr:nth-child(1) td{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 2px double rgba(0,0,0,0.4);
+  justify-content: center;
+}
+
+.map table tr:nth-child(1) td h2{
+  text-align: center;
+  font-weight: 500;
+}
