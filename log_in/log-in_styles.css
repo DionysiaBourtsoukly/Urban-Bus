@@ -1,7 +1,7 @@
 :root {
     font-size: 10px;
   }
-  
+
   body {
     background-color:rgb(121, 121, 190);
     margin: 0;
@@ -178,10 +178,14 @@
     display: block;
     margin-left: 41%;
     margin-top: 5%;
+    border: 2px solid blue;
   }
   .accounts form{
     text-align: center;
     margin-bottom: 20%;
   }
 
-  
+  .accounts form input{
+    border: 2px;
+    border-radius: 5px;
+  }
