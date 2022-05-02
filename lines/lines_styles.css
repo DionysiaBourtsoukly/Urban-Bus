@@ -1,0 +1,184 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  background-color:rgb(121, 121, 190);
+  margin: 0;
+  font: 1.8em / 1.8 Candara;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 64);
+  margin:0;
+  padding-left: 1.5em;
+}
+
+.logo {
+  align-content: center;
+  font-size: 2em;
+  justify-content: flex-start;
+  font-family: Broadway;
+  color: white;
+  line-height: 2.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li{
+  display: flex;
+  padding-top: 10em;
+  padding: 1em;
+}
+nav ul :last-child{
+  padding-top: 0.7em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none; 
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+nav li:hover{
+  background-color: rgba(0,0,47,1);
+}
+
+.sign-in{
+  padding: 1em;
+  width: 2em;
+  cursor: pointer;
+} 
+
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url("bus.jpg");
+  }
+
+
+  .line-names{
+    background-color: rgb(195, 145, 246);
+    width:25%;
+    height:88%;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+ .line-names table{
+    width:90%;
+    border-collapse: collapse;
+    font-size: 1.2em;
+    text-indent: .3em;
+ }
+
+ .line-names table tr td:nth-child(1){
+   font-weight: bold;
+   text-align: end;
+ }
+
+ .line-names table tr td:nth-child(2){
+  text-align: start;
+}
+
+ .line-names table tr td{
+   border-bottom: 0.5px double rgba(0,0,0,0.2);
+   height: 2.5em;
+ }
+
+ .line-names table tr td a{
+   text-decoration: none;
+   color: black;
+   cursor: pointer;
+ }
+
+ .line-names table tr td a:hover{
+  background-color: rgb(181, 118, 245);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-radius: 10px;
+ }
+
+
+ .schedule-map{
+   width:75%;
+   background-color: rgb(215, 186, 244);
+ }
+
+ .schedule, .map{
+  display: inline-flex;
+ }
+
+ .schedule a{
+   text-decoration: none;
+   color: black;
+   cursor: pointer;
+   background-color: rgb(143, 43, 224);
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   font-size: 1.1em;
+   padding-left: 1em;
+   padding-right: 1em;
+
+ }
+
+ .map a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  background-color: rgb(158, 75, 227);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 1.1em;
+  padding-left: 1em;
+  padding-right: 1em;
+ }
+
+ .timetable{
+  background-color: rgb(234, 222, 246);
+  height: 84%;
+  overflow-x: hidden;
+  overflow-y: auto;
+ }
+
+ .timetable table{
+  width:100%;
+  text-align: center;
+ }
+
+ .timetable table tr td{
+  column-width: 5em;
+ }
+
+ .timetable table tr:not(:last-child) td{
+  border-bottom: 1px double rgba(0,0,0,0.2);
+ }
+
+ .timetable table tr td:not(:last-child){
+  border-right: 1px double rgba(0,0,0,0.2);
+ }
+
+ .timetable table tr:nth-child(1) td{
+  border-bottom: 3px solid rgba(0,0,0,0.3);
+  color: rgb(91, 16, 162);
+  font-weight: bold;
+ }
