@@ -84,7 +84,7 @@ nav li:hover{
 .places #a{
   padding-left: 3%;
 }
-.r1{
+.r1,.r2,.r3,.r4,.r5,.r6{
   display: flex;
 }
 
@@ -96,6 +96,7 @@ nav li:hover{
   color:black;
 }
 
-.places #ahover{
+.places #a:hover{
   cursor: pointer;
+  font-weight: bold;
 }
