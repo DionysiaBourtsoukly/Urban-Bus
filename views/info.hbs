@@ -1,0 +1,63 @@
+<body>
+  <link rel="stylesheet" href="/css/info_styles.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <nav>
+      <div class="logo"> Urban Bus </div>
+      <ul>
+        <li>
+          <a href="/home">Αρχική</a>
+        </li>
+        <li>
+          <a href="/lines">Δρομολόγια</a>
+        </li>
+        <li>
+          <a href="/ticket-selling-points">Εκδοτήρια</a>
+        </li>
+        <li>
+          <a href="/tickets">Εισιτήρια - Κάρτες</a>
+        </li>
+        <li>
+          <a href="/info">Πληροφορίες</a>
+        </li>
+        <li>
+          <img src="sign_in.png" alt="placeholder" class="sign-in">
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="info-map">
+        <div class="info">
+          <table>
+            <tr>
+              <td colspan="2"><h2>Πληροφορίες</h2></td>
+            </tr>
+            <tr>
+              <td><b>Τηλ.</b></td>
+              <td>2610 273 936</td>
+            </tr>
+            <tr>
+              <td><b>fax</b></td>
+              <td>2610 273 977</td>
+            </tr>
+            <tr>
+              <td><b>email</b></td>
+              <td>info@astikopatras.gr</td>
+            </tr>
+            <tr>
+              <td><b>Διεύθυνση</b></td>
+              <td>Αγίου Ανδρέου 9</td>
+            </tr>
+          </table>
+        </div>
+        <div class="map">
+          <table>
+            <tr><td><h2>Χάρτης</h2></td></tr>
+            <tr><td id="map-container"></td></tr>
+          </table>
+        </div>
+      </div> 
+    </div>
+    <script src="info_map_script.mjs"></script>
+  </body>
+  
