@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
     <title>Patras Urban Bus</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
@@ -13,22 +15,22 @@
       <div class="logo"> Urban Bus </div>
       <ul>
         <li>
-          <a href="">Αρχική</a>
+          <a href="index.html">Αρχική</a>
         </li>
         <li>
-          <a href="">Δρομολόγια</a>
+          <a href="lines.html">Δρομολόγια</a>
         </li>
         <li>
-          <a href="">Εκδοτήρια</a>
+          <a href="tickets_selling_point.html">Εκδοτήρια</a>
         </li>
         <li>
-          <a href="">Εισιτήρια - Κάρτες</a>
+          <a href="tickets.html">Εισιτήρια - Κάρτες</a>
         </li>
         <li>
-          <a href="">Πληροφορίες</a>
+          <a href="info.html">Πληροφορίες</a>
         </li>
         <li>
-          <img src="sign_in.png" alt="placeholder" class="sign-in">
+          <img src="sign_in.png" alt="placeholder" class="sign-in" id="0">
         </li>
       </ul>
     </nav>
@@ -38,7 +40,7 @@
           <p>Από</p>
           <form action="" method="post">
             <input type="search" size=22 placeholder="Επιλέξτε σημείο εκκίνησης">
-            <button>
+            <button id="button_from">
               <img src="marker.png">
             </button>
           </form> 
@@ -47,7 +49,7 @@
           <p>Προς</p>
           <form action="" method="post">
             <input type="search" size=22 placeholder="Επιλέξτε προορισμό">
-            <button>
+            <button id="button_to">
               <img src="marker.png">
             </button>
           </form> 
@@ -70,8 +72,6 @@
         </li>
       </div>
     </div>
-    
-    
-
   </body>
+  <script src="index_script.mjs"></script>
 </html>
