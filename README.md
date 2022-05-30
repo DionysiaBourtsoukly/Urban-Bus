@@ -1,3 +1,3 @@
 # Urban-Bus
 
-.vscode and node_modules folders needed needed
+.vscode and node_modules folders needed
