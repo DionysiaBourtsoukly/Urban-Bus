@@ -98,11 +98,14 @@ nav li:hover{
 
  .line-names table tr td:nth-child(2){
   text-align: start;
+  font-weight: normal !important;
 }
 
  .line-names table tr td{
-   border-bottom: 0.5px double rgba(0,0,0,0.2);
+   border-bottom: 0.5px double rgba(0,0,0,0.2) !important;
    height: 2.5em;
+   border-right: none !important;
+   column-width: auto !important;
  }
 
  .line-names table tr td p{
@@ -183,3 +186,8 @@ nav li:hover{
   color: rgb(91, 16, 162);
   font-weight: bold;
  }
+
+
+
+
+ 

@@ -25,7 +25,6 @@ map = new mapboxgl.Map({
     zoom: 12});
 
 let lines = document.querySelectorAll(".line-names tr td p");
-console.log(container);
 
 mapLink[0].addEventListener('click', ()=>{
     try {
