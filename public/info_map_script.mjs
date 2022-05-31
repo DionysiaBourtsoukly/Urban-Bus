@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGlvbnlzaWFtcCIsImEiOiJjbDN0OWk3YmIwNnNrM2pxcTBpbzU1d3ozIn0.JnkT4wDJtRXm-96bb85GLg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW5uYWJsZSIsImEiOiJjbDNlZ3B1OGkwYnJ5M2Nucm8yc2FqdmdhIn0.Shv1FcO_OlpCHdFDjOtV6w';
 const map = new mapboxgl.Map({
     container: 'map-container', // container ID
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -34,4 +34,3 @@ mapboxClient.geocoding
     markerDiv.addEventListener('mouseenter', () => marker.togglePopup());
     markerDiv.addEventListener('mouseleave', () => marker.togglePopup());
 })
-

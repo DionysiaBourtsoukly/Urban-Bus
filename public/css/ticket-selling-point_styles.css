@@ -74,9 +74,11 @@ nav li:hover{
 }
   
 .places {
-  height: 100%;
-  width : 40%;
+  height: 88%;
+  width : 35%;
   background-color: rgb(112, 146, 190);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .places h2{
   text-align: center;
@@ -99,4 +101,11 @@ nav li:hover{
 .places #a:hover{
   cursor: pointer;
   font-weight: bold;
+}
+
+#map-container{
+  width: 65%;
+  height: 88%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }

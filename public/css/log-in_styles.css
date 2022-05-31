@@ -1,191 +1,186 @@
 :root {
-    font-size: 10px;
-  }
+  font-size: 10px;
+}
 
-  body {
-    background-color:rgb(121, 121, 190);
-    margin: 0;
-    font: 1.8em / 1.8 Candara;
-  }
-  
-  nav {
+body {
+  background-color:rgb(121, 121, 190);
+  margin: 0;
+  font: 1.8em / 1.8 Candara;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 64);
+  margin:0;
+  padding-left: 1.5em;
+}
+
+.logo {
+  align-content: center;
+  font-size: 2em;
+  justify-content: flex-start;
+  font-family: Broadway;
+  color: white;
+  line-height: 2.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li{
+  display: flex;
+  padding-top: 10em;
+  padding: 1em;
+}
+nav ul :last-child{
+  padding-top: 0.7em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none; 
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+nav li:hover{
+  background-color: rgba(0,0,47,1);
+}
+
+.sign-in{
+  padding: 1em;
+  width: 2em;
+  cursor: pointer;
+} 
+
+.content{
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: rgb(0, 0, 64);
-    margin:0;
-    padding-left: 1.5em;
-  }
-  
-  .logo {
-    align-content: center;
-    font-size: 2em;
-    justify-content: flex-start;
-    font-family: Broadway;
-    color: white;
-    line-height: 2.5em;
-  }
-  
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style-type: none;
-    margin: 0;
-  }
-  
-  nav ul li{
-    display: flex;
-    padding-top: 10em;
-    padding: 1em;
-  }
-  nav ul :last-child{
-    padding-top: 0.7em;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none; 
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  
-  nav li:hover{
-    background-color: rgba(0,0,47,1);
-  }
-  
-  .sign-in{
-    padding: 1em;
-    width: 2em;
-    cursor: pointer;
-  } 
-  
-  .content{
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-      background-size: cover;
-      background-image: url("bus.jpg");
-    }
-  
-  
-  .from-to{
-    background-color: rgba(224, 228, 239, 0.7);
-    border-radius: 10px;
-    margin: 5%;
-    margin-left: 10%;
-    width: 25em;
-    height: 70%;
-  }
-  
-  .from{
-    display: inline-flex;
-  }
-  
-  .from p{
-    font-size: 1.2em;
-    padding-top: 1.5em;
-    padding-left: 2em;
-  }
-  
-  .from form{
-    padding-top: 3.1em;
-    padding-left: 1em;
-  }
-  
-  .from input{
-    font-size: 1em;
-  }
-  
-  .from button{
-    cursor: pointer;
-  }
-  
-  .from button img{
-    width:1.3em;
-  }
-  
-  .to{
-    display: inline-flex;
-  }
-  
-  .to p{
-    font-size: 1.2em;
-    padding-left: 2em;
-  }
-  
-  .to form{
-    padding-top: 1.2em;
-    padding-left: 0.6em;
-  }
-  
-  .to input{
-    font-size: 1em;
-  }
-  
-  .to button{
-    cursor: pointer;
-  }
-  
-  .to button img{
-    width:1.3em;
-  }
-  
-  
-  .leave-now{
-    padding: 1.5em;
-    padding-left: 2em;
-    padding-bottom: 0.5em;
-  }
-  
-  .leave-now a{
-    text-decoration: none;
-    color: black;
-  }
-  
-  .leave-now a:hover{
-    cursor: pointer;
-  }
-  
-  .searches{
-    border-top-style: solid;
-    border-top-color: rgba(0,0,0,0.3);
-    color: rgba(1,1,1,0.6);
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    padding-top: 3em;
-  }
-  
-  .accounts{
-    background-color: rgb(98, 162, 190);
-    width: 15em;
+    position: fixed;
+    width: 100%;
     height: 100%;
-    list-style-type: none;
-  }
-  
-  .accounts h2{
-    text-align: center;
-    font-weight: 500;
-    font-size: 1.2em;
-  }
-  .accounts button{
-    display: block;
-    margin-left: 41%;
-    margin-top: 5%;
-    border: 2px solid blue;
-  }
-  .accounts form{
-    text-align: center;
-    margin-bottom: 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url("bus.jpg");
   }
 
-  .accounts form input{
-    border: 2px;
-    border-radius: 5px;
-  }
+
+.from-to{
+  background-color: rgba(224, 228, 239, 0.7);
+  border-radius: 10px;
+  margin: 5%;
+  margin-left: 10%;
+  width: 25em;
+  height: 70%;
+}
+
+.from{
+  display: inline-flex;
+}
+
+.from p{
+  font-size: 1.2em;
+  padding-top: 1.5em;
+  padding-left: 2em;
+}
+
+.from form{
+  padding-top: 3.1em;
+  padding-left: 1em;
+}
+
+.from input{
+  font-size: 1em;
+}
+
+.from button{
+  cursor: pointer;
+}
+
+.from button img{
+  width:1.3em;
+}
+
+.to{
+  display: inline-flex;
+}
+
+.to p{
+  font-size: 1.2em;
+  padding-left: 2em;
+}
+
+.to form{
+  padding-top: 1.2em;
+  padding-left: 0.6em;
+}
+
+.to input{
+  font-size: 1em;
+}
+
+.to button{
+  cursor: pointer;
+}
+
+.to button img{
+  width:1.3em;
+}
+
+
+.leave-now{
+  padding: 1.5em;
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+}
+
+.leave-now a{
+  text-decoration: none;
+  color: black;
+}
+
+.leave-now a:hover{
+  cursor: pointer;
+}
+
+.searches{
+  border-top-style: solid;
+  border-top-color: rgba(0,0,0,0.3);
+  color: rgba(1,1,1,0.6);
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+.accounts{
+  background-color: rgb(137, 82, 220);
+  width: 15em;
+  height: 100%;
+  list-style-type: none;
+}
+
+.accounts h2{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.accounts button{
+  display: block;
+  margin-left: 41%;
+  margin-top: 5%;
+}
+.accounts form{
+  text-align: center;
+  margin-bottom: 20%;
+}
+
