@@ -6,6 +6,7 @@ import { engine } from 'express-handlebars';
 import { watch } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import * as model from './model/urban-bus-model-lite.js';
 const app = express()
 const router = express.Router();
 //mapboxgl
@@ -80,12 +81,32 @@ app.use(router);
 router.route('').get(start);
 router.route('/home').get(start);
 router.route('/info').get(info);
-router.route('/lines').get(lines);
 router.route('/ticket-selling-points').get(ticketSellingPoint);
 router.route('/tickets').get(tickets);
 
 ////
+app.get("/lines", (req,res)=>{
+    model.getLines((err,rows)=>{
+        if (err) {
+            return console.error(err.message);
+        }
+        res.render("lines", {data: rows });
+    })
+})
 
+
+// app.get("/lines", (req,res)=>{
+//     const line_num = req.params.line_number; 
+//     console.log("ADsfgh")
+//     model.getMondaySchedule(line_num, (err,rows)=>{
+//         if (err) {
+//             return console.error(err.message);
+//         }
+//         res.render("lines", {data2: rows });
+//     })
+// })
 let port = process.env.PORT || '3000';
 
 const server = app.listen(port, () => { console.log("Περιμένω αιτήματα στο port " + port) });
+
+

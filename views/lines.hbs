@@ -28,82 +28,12 @@
     <div class="content">
       <div class="line-names">
         <table>
+          {{#each data}}
           <tr>
-            <td>101</td>
-            <td><p>Εγλυκάδα</p></td>
+            <td>{{this.line_number}}</td>
+            <td><p>{{this.line_name}}</p></td>
           </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
-          <tr>
-            <td>No.</td>
-            <td><p>Δρομολόγιο</p></td>
-          </tr>
+          {{/each}}
         </table>
       </div>
       <div class="schedule-map">
@@ -124,7 +54,12 @@
               <td>Σάββατο</td>
               <td>Κυριακή</td>
             </tr>
-            <tr><td>6:20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            {{#each data}}
+            {{#if this.day=="Δευτέρα"}}
+            <tr><td>{{this.hour}}</td></tr>
+            {{/if}}
+            {{/each}}
+            {{!-- <tr><td>6:20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
             <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
             <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
             <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
@@ -148,7 +83,7 @@
             <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
             <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
             <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr> --}}
           </table>
         </div>
       </div>
