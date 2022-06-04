@@ -1,4 +1,5 @@
 //Express.js
+import { table } from 'console';
 import express from 'express'
 import { query } from 'express';
 //Handlebars (https://www.npmjs.com/package/express-handlebars)
@@ -31,48 +32,48 @@ let getAllElements = function (callback) {
     callback(null, {});
 };
 
-let start = function(req,res){
-    getAllElements(function(err,tasks){
+let start = function (req, res) {
+    getAllElements(function (err, tasks) {
         if (err) {
             res.send(err);
         }
-        res.render('home_page',{});
+        res.render('home_page', {});
     });
 }
 
-let lines = function(req,res){
-    getAllElements(function(err,tasks){
+let lines = function (req, res) {
+    getAllElements(function (err, tasks) {
         if (err) {
             res.send(err);
         }
-        res.render('lines',{});
+        res.render('lines', {});
     });
 }
 
-let info = function(req,res){
-    getAllElements(function(err,tasks){
+let info = function (req, res) {
+    getAllElements(function (err, tasks) {
         if (err) {
             res.send(err);
         }
-        res.render('info',{});
+        res.render('info', {});
     });
 }
 
-let ticketSellingPoint = function(req,res){
-    getAllElements(function(err,tasks){
+let ticketSellingPoint = function (req, res) {
+    getAllElements(function (err, tasks) {
         if (err) {
             res.send(err);
         }
-        res.render('ticket-selling-point',{});
+        res.render('ticket-selling-point', {});
     });
 }
 
-let tickets = function(req,res){
-    getAllElements(function(err,tasks){
+let tickets = function (req, res) {
+    getAllElements(function (err, tasks) {
         if (err) {
             res.send(err);
         }
-        res.render('tickets',{});
+        res.render('tickets', {});
     });
 }
 
@@ -85,12 +86,69 @@ router.route('/ticket-selling-points').get(ticketSellingPoint);
 router.route('/tickets').get(tickets);
 
 ////
-app.get("/lines", (req,res)=>{
-    model.getLines((err,rows)=>{
+app.get("/lines", (req, res) => {
+    model.getLines((err, rows) => {
         if (err) {
             return console.error(err.message);
         }
-        res.render("lines", {data: rows });
+        let table = new Array();
+        for (let i of rows) {
+            let l = new Object();
+            l.line_number = i.line_number;
+            l.line_name = i.line_name;
+            let notintable = "true";
+            for (let j of table) {
+                if (j.line_number == l.line_number) {
+                    notintable = "false";
+                }
+            }
+            if (notintable == "true") {
+                table.push(l);
+            }
+        }
+        for (let i of table) {
+            i.day = new Array();
+            let time1 = new Array();
+            let time2 = new Array();
+            let time3 = new Array();
+            let time4 = new Array();
+            let time5 = new Array();
+            let time6 = new Array();
+            let time7 = new Array();
+            for (let j of rows) {
+                if (j.line_number == i.line_number) {
+                    if (j.day == "Δευτέρα") {
+                        time1.push(j.hour);
+                    }
+                    if (j.day == "Τρίτη") {
+                        time2.push(j.hour);
+                    }
+                    if (j.day == "Τετάρτη") {
+                        time3.push(j.hour);
+                    }
+                    if (j.day == "Πέμπτη") {
+                        time4.push(j.hour);
+                    }
+                    if (j.day == "Παρασκευή") {
+                        time5.push(j.hour);
+                    }
+                    if (j.day == "Σάββατο") {
+                        time6.push(j.hour);
+                    }
+                    if (j.day == "Κυριακή") {
+                        time7.push(j.hour);
+                    }
+                }
+            }
+            i.day.push(time1);
+            i.day.push(time2);
+            i.day.push(time3);
+            i.day.push(time4);
+            i.day.push(time5);
+            i.day.push(time6);
+            i.day.push(time7);
+        }
+        res.render("lines", { data: table});
     })
 })
 
