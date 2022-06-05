@@ -29,21 +29,24 @@
       <div class="from-to">
         <div class="from">
           <p>Από</p>
-          <form action="" method="post">
-            <input type="search" size=22 placeholder="Επιλέξτε σημείο εκκίνησης">
-            <button id="button_from">
-              <img src="marker.png">
+          <div class="from_input">
+            <input type="text" size=22 placeholder="Επιλέξτε σημείο εκκίνησης" id="start">
+            <button type="button" id="button_from">
+                <img src="marker.png">
             </button>
-          </form> 
+          </div>
         </div>
         <div class="to">
           <p>Προς</p>
-          <form action="" method="post">
-            <input type="search" size=22 placeholder="Επιλέξτε προορισμό">
-            <button id="button_to">
+          <div class="to_input">
+            <input type="text" size=22 placeholder="Επιλέξτε προορισμό" id="dest">
+            <button type="button" id="button_to">
               <img src="marker.png">
             </button>
-          </form> 
+          </div>
+        </div>
+        <div class="search_button">
+          <button>Αναζήτηση</button>
         </div>
         <div class="leave-now"><a role="button" href>αναχώρηση τώρα</a></div>
         <div class="searches">
