@@ -1,0 +1,55 @@
+<body>
+  <link rel="stylesheet" href="/css/ticket-selling-point-update_styles.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <nav>
+      <div class="logo"> Urban Bus </div>
+      <ul>
+        <li>
+          <a href="/home">Αρχική</a>
+        </li>
+        <li>
+          <a href="/lines">Δρομολόγια</a>
+        </li>
+        <li>
+          <a href="/ticket-selling-points">Εκδοτήρια</a>
+        </li>
+        <li>
+          <a href="/tickets">Εισιτήρια - Κάρτες</a>
+        </li>
+        <li>
+          <a href="/info">Πληροφορίες</a>
+        </li>
+        <li class="name" id={{loggedUserId}}>
+          <img src="sign_in.png" id="0" alt="placeholder" class="sign-in">
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="places">
+        <h2>Σημεία πώλησης εισιτηρίων</h2>
+        {{#each data}}
+            <div class="r" id="{{this.id}}"> 
+                <table>
+                  <tr>
+                    <td rowspan="2" class="address">
+                      <p class="update">{{this.address}}</p>
+                    </td>
+                    <td>
+                      <p class="update">{{this.time.[0]}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="update">{{this.time.[1]}}</p>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+        {{/each}}
+        </div>
+      <div id="map-container"></div>
+    </div>
+  <script src="ticket-selling-point-update.mjs"></script>
+  </body>
