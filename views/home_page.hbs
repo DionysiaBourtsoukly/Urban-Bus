@@ -1,0 +1,70 @@
+<body>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+  <nav>
+    <div class="logo"> Urban Bus </div>
+    <ul>
+      <li>
+        <a href="/home">Αρχική</a>
+      </li>
+      <li>
+        <a href="/lines">Δρομολόγια</a>
+      </li>
+      <li>
+        <a href="/ticket-selling-points">Εκδοτήρια</a>
+      </li>
+      <li>
+        <a href="/tickets">Εισιτήρια - Κάρτες</a>
+      </li>
+      <li>
+        <a href="/info">Πληροφορίες</a>
+      </li>
+      <li class={{role}},{{name}} id={{loggedUserId}}>
+        <img src="sign_in.png" id="0" alt="placeholder" class="sign-in">
+      </li>
+    </ul>
+  </nav>
+  <div class="content">
+    <div class="from-to">
+      <div class="from">
+        <p>Από</p>
+        <div class="from_input">
+          <input type="text" size=22 placeholder="Επιλέξτε σημείο εκκίνησης" id="start">
+          <button type="button" id="button_from">
+            <img src="marker.png">
+          </button>
+        </div>
+      </div>
+      <div class="to">
+        <p>Προς</p>
+        <div class="to_input">
+          <input type="text" size=22 placeholder="Επιλέξτε προορισμό" id="dest">
+          <button type="button" id="button_to">
+            <img src="marker.png">
+          </button>
+        </div>
+      </div>
+      <div class="search_button">
+        <button>Αναζήτηση</button>
+      </div>
+      <div class="leave-now"><a role="button" href>αναχώρηση τώρα</a></div>
+      <div class="searches">
+        <div class="no-searches">no recent searches</div>
+      </div>
+    </div>
+    <div class="anouncements">
+      <h2>Ανακοινώσεις</h2>
+      <li>
+        <p>Ανακοίνωση1</p>
+      </li>
+      <li>
+        <p>Ανακοίνωση2</p>
+      </li>
+      <li>
+        <p>Ανακοίνωση3</p>
+      </li>
+    </div>
+  </div>
+  <script src="index_script.mjs"></script>
+</body>

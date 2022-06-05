@@ -1,0 +1,83 @@
+<body>
+  <link rel="stylesheet" href="/css/tickets_styles.css">
+    <nav>
+      <div class="logo"> Urban Bus </div>
+      <ul>
+        <li>
+          <a href="/home">Αρχική</a>
+        </li>
+        <li>
+          <a href="/lines">Δρομολόγια</a>
+        </li>
+        <li>
+          <a href="/ticket-selling-points">Εκδοτήρια</a>
+        </li>
+        <li>
+          <a href="/tickets">Εισιτήρια - Κάρτες</a>
+        </li>
+        <li>
+          <a href="/info">Πληροφορίες</a>
+        </li>
+        <li class="name" id={{loggedUserId}}>
+          <img src="sign_in.png" id="0" alt="placeholder" class="sign-in">
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="tickets-cards">
+        <div class="tickets">
+          <table>
+            <tr>
+              <td colspan="3"><h2>Εισιτήρια</h2></td>
+            </tr>
+            <tr>
+              <td rowspan="2"><p>{{data.0.zone}}</p></td>
+              <td>{{data.0.sale}}</td>
+              <td>{{data.0.price}}</td>
+            </tr>
+            <tr>
+              <td>{{data.1.sale}}</td>
+              <td>{{data.1.price}}</td>
+            </tr>
+            
+            <tr>
+              <td rowspan="2"><p>{{data.2.zone}}</p></td>
+              <td>{{data.2.sale}}</td>
+              <td>{{data.2.price}}</td>
+            </tr>
+            <tr>
+              <td>{{data.3.sale}}</td>
+              <td>{{data.3.price}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="cards">
+          <table>
+            <tr>
+              <td colspan="3"><h2>Μηνιαίες Κάρτες</h2></td>
+            </tr>
+            <tr>
+              <td rowspan="2"><p>{{data2.0.zone}}</p></td>
+              <td>{{data2.0.sale}}</td>
+              <td>{{data2.0.price}}</td>
+            </tr>
+            <tr>
+              <td>{{data2.1.sale}}</td>
+              <td>{{data2.1.price}}</td>
+            </tr>
+            
+            <tr>
+              <td rowspan="2"><p>{{data2.2.zone}}</p></td>
+              <td>{{data2.2.sale}}</td>
+              <td>{{data2.2.price}}</td>
+            </tr>
+            <tr>
+              <td>Μειωμένη</td>
+              <td>37,50€</td>
+            </tr>
+          </table>  
+        </div>
+      </div> 
+    </div>
+    <script src="tickets.mjs"></script>
+  </body>
