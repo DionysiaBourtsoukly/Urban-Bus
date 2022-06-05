@@ -51,7 +51,7 @@ let lines = function(req,res){
         if (err) {
             res.send(err);
         }
-        res.render('lines',{"loggedUserId": req.session.loggedUserId});
+        res.render('lines',{"name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId});
     });
 }
 
@@ -60,7 +60,7 @@ let info = function(req,res){
         if (err) {
             res.send(err);
         }
-        res.render('info',{"loggedUserId": req.session.loggedUserId});
+        res.render('info',{"name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId});
     });
 }
 
@@ -79,7 +79,7 @@ let ticketSellingPoint = function(req,res){
                 table.push(i);
             }
         })
-        res.render('ticket-selling-point',{"data":table, "loggedUserId": req.session.loggedUserId});
+        res.render('ticket-selling-point',{"data":table, "name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId});
     });
 }
 
@@ -103,7 +103,7 @@ let tickets = function(req,res){
                 }
             }
         })
-        res.render('tickets',{"data":tickettable, "data2":cardtable, "loggedUserId": req.session.loggedUserId});
+        res.render('tickets',{"data":tickettable, "data2":cardtable, "name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId});
     });
 }
 
@@ -128,7 +128,7 @@ let updateTickets1 = function(req,res){
                 }
             }
         })
-        res.render('tickets-update',{"data":tickettable, "data2":cardtable, "loggedUserId": req.session.loggedUserId})
+        res.render('tickets-update',{"data":tickettable, "data2":cardtable, "name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId})
     })
 }
 
@@ -147,7 +147,7 @@ let updateTicketsSellingPoint1 = function(req,res){
                 table.push(i);
             }
         })
-        res.render('ticket-selling-point-update',{"data":table, "loggedUserId": req.session.loggedUserId});
+        res.render('ticket-selling-point-update',{"data":table, "name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId});
     });
 }
 
@@ -241,7 +241,7 @@ app.get("/lines", (req, res) => {
             i.day.push(time6);
             i.day.push(time7);
         }
-        res.render("lines", { data: table});
+        res.render("lines", { data: table,"name":req.session.loggedUserUsername, "role":req.session.loggedUserRole ,"loggedUserId": req.session.loggedUserId});
     })
 })
 
@@ -295,6 +295,9 @@ router.route('/getStopsCoords/:line_name').get((req, res) => {
 
     })
 })
+
+//logout
+router.route('/logout').get(logInController.doLogout);
 
 let port = process.env.PORT || '3000';
 
