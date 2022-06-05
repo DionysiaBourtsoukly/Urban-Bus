@@ -388,9 +388,27 @@ if (n.id) {
         b2.setAttribute("href", "/update-ticket-selling-points");
         l2.appendChild(b2);
         popup.appendChild(l2);
+        let l3 = document.createElement("li");
+        let b3 = document.createElement("a");
+        b3.textContent = "> Έξοδος";
+        b3.style.fontWeight = "lighter"
+        b3.style.textDecoration = "none";
+        b3.style.color = "black";
+        b3.setAttribute("href", "/logout");
+        l3.appendChild(b3);
+        popup.appendChild(l3);
     }
     else if (n.className.split(",")[0] == "0") {
         us.textContent = "Welcome user " + n.className.split(",")[1];
         popup.appendChild(us);
+        let l3 = document.createElement("li");
+        let b3 = document.createElement("a");
+        b3.textContent = "> Έξοδος";
+        b3.style.fontWeight = "lighter"
+        b3.style.textDecoration = "none";
+        b3.style.color = "black";
+        b3.setAttribute("href", "/logout");
+        l3.appendChild(b3);
+        popup.appendChild(l3);
     }
 }
