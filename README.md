@@ -1,7 +1,7 @@
 # Urban-Bus
 
 node_modules folders needed <br />
-To run website(e.g. in visual studio code) : <br />
+To run website(e.g. in visual studio code) :
 1) open folder with main in visual studio code
 2) open new terminal <br />
 3) to get node_modules, run command "npm install"<br />
