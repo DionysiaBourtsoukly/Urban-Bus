@@ -1,49 +1,52 @@
 <body>
   <link rel="stylesheet" href="/css/lines_styles.css">
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
-    <nav>
-      <div class="logo"> Urban Bus </div>
-      <ul>
-        <li>
-          <a href="/home">Αρχική</a>
-        </li>
-        <li>
-          <a href="/lines">Δρομολόγια</a>
-        </li>
-        <li>
-          <a href="/ticket-selling-points">Εκδοτήρια</a>
-        </li>
-        <li>
-          <a href="/tickets">Εισιτήρια - Κάρτες</a>
-        </li>
-        <li>
-          <a href="/info">Πληροφορίες</a>
-        </li>
-        <li>
-          <img src="sign_in.png" alt="placeholder" class="sign-in">
-        </li>
-      </ul>
-    </nav>
-    <div class="content">
-      <div class="line-names">
-        <table>
-          {{#each data}}
-          <tr>
-            <td>{{this.line_number}}</td>
-            <td><p>{{this.line_name}}</p></td>
-          </tr>
-          {{/each}}
-        </table>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+  <nav>
+    <div class="logo"> Urban Bus </div>
+    <ul>
+      <li>
+        <a href="/home">Αρχική</a>
+      </li>
+      <li>
+        <a href="/lines">Δρομολόγια</a>
+      </li>
+      <li>
+        <a href="/ticket-selling-points">Εκδοτήρια</a>
+      </li>
+      <li>
+        <a href="/tickets">Εισιτήρια - Κάρτες</a>
+      </li>
+      <li>
+        <a href="/info">Πληροφορίες</a>
+      </li>
+      <li>
+        <img src="sign_in.png" alt="placeholder" class="sign-in">
+      </li>
+    </ul>
+  </nav>
+  <div class="content">
+    <div class="line-names">
+      <table>
+        {{#each data}}
+        <tr>
+          <td>{{this.line_number}}</td>
+          <td>
+            <p>{{this.line_name}}</p>
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+    <div class="schedule-map">
+      <div class="schedule">
+        <p>ΠΡΟΓΡΑΜΜΑ</p>
       </div>
-      <div class="schedule-map">
-        <div class="schedule">
-          <p>ΠΡΟΓΡΑΜΜΑ</p>
-        </div>
-        <div class="map">
-          <p>ΧΑΡΤΗΣ</p>
-        </div>
-        <div class="container">
+      <div class="map">
+        <p>ΧΑΡΤΗΣ</p>
+      </div>
+      <div class="container">
+        <div class="cont">
           <table>
             <tr>
               <td>Δευτέρα</td>
@@ -55,38 +58,18 @@
               <td>Κυριακή</td>
             </tr>
             {{#each data}}
-            {{#if this.day=="Δευτέρα"}}
-            <tr><td>{{this.hour}}</td></tr>
-            {{/if}}
-            {{/each}}
-            {{!-- <tr><td>6:20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr> --}}
-          </table>
+            <table>
+              <tr>
+                <td>{{this.line_name}}</td>
+                {{#each day}}
+                <td>{{this}}</td>
+                {{/each}}
+              </tr>
+              {{/each}}
+            </table>
         </div>
       </div>
     </div>
+  </div>
   <script src="lines.mjs"></script>
-  </body>
+</body>
