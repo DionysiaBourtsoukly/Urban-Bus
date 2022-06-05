@@ -84,17 +84,16 @@ nav li:hover{
 }
 
 .from{
-  display: inline-flex;
+  display: inline-flex;  
 }
-
 .from p{
   font-size: 1.2em;
   padding-top: 1.5em;
   padding-left: 2em;
 }
 
-.from form{
-  padding-top: 3.1em;
+.from_input{
+  padding-top: 3.2em;
   padding-left: 1em;
 }
 
@@ -112,6 +111,7 @@ nav li:hover{
 
 .to{
   display: inline-flex;
+  height: 1.5em;
 }
 
 .to p{
@@ -119,9 +119,9 @@ nav li:hover{
   padding-left: 2em;
 }
 
-.to form{
-  padding-top: 1.2em;
-  padding-left: 0.6em;
+.to_input{
+  padding-top: 1.5em;
+  padding-left: .5em;
 }
 
 .to input{
@@ -179,4 +179,17 @@ nav li:hover{
   border-bottom-style:double;
   border-bottom-color: rgba(0,0,0,0.2);
   padding: 2em;
+}
+
+.search_button{
+  padding-top: 1em;
+}
+
+.search_button button{
+  cursor: pointer;
+  margin-left: 40%;
+  background-color: rgb(104, 96, 245);
+  border-radius: 5px;
+  font-size: 1em;
+  border-color: rgba(0,0,0,0.2);
 }

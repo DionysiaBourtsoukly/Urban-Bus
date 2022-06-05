@@ -94,6 +94,7 @@ nav li:hover{
  .line-names table tr td:nth-child(1){
    font-weight: bold;
    text-align: end;
+   color: black !important;
  }
 
  .line-names table tr td:nth-child(2){
