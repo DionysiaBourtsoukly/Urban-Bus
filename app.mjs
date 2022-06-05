@@ -75,7 +75,7 @@ let ticketSellingPoint = function(req,res){
                 res.send(err);
             }
             for(let i of rows){
-                i.time = i.time.split("\\r\\n");
+                i.time = i.time.split(",");
                 table.push(i);
             }
         })
